@@ -1,270 +1,148 @@
 <html>
-    <head>
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-                                       <style>
-                            html {
-                                background-image: url("https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
-                                position: sticky;           
-                                           }
-                              @charset "UTF-8";
-                            body {
-                              font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-                              line-height: 1.4;
-                              max-width: 800px;
-                              margin: 20px auto;
-                              padding: 0 10px;
-                              color: #dbdbdb;
-                              background: #202b38 !important;
-                              text-rendering: optimizeLegibility;
-                            }
-                            button, input, textarea {
-                              transition: background-color 0.1s linear, border-color 0.1s linear, color 0.1s linear, box-shadow 0.1s linear, transform 0.1s ease;
-                            }
-                            h1 {
-                              font-size: 2.2em;
-                              margin-top: 0;
-                            }
-                            h1,
-                            h2,
-                            h3,
-                            h4,
-                            h5,
-                            h6 {
-                              margin-bottom: 12px;
-                            }
-                            h1,
-                            h2,
-                            h3,
-                            h4,
-                            h5,
-                            h6,
-                            strong {
-                              color: #ffffff;
-                            }
-                            h1,
-                            h2,
-                            h3,
-                            h4,
-                            h5,
-                            h6,
-                            b,
-                            strong,
-                            th {
-                              font-weight: 600;
-                            }
-                            blockquote {
-                              border-left: 4px solid #0096bfab;
-                              margin: 1.5em 0em;
-                              padding: 0.5em 1em;
-                              font-style: italic;
-                            }
-                            blockquote > footer {
-                              margin-top: 10px;
-                              font-style: normal;
-                            }
-                            blockquote cite {
-                              font-style: normal;
-                            }
-                            address {
-                              font-style: normal;
-                            }
-                            button,
-                            input[type='submit'],
-                            input[type='button'],
-                            input[type='checkbox'] {
-                              cursor: pointer;
-                            }
-                            input:not([type='checkbox']):not([type='radio']),
-                            select {
-                              display: block;
-                            }
-                            input, select, button, textarea {
-                              color: #ffffff;
-                              background-color: #161f27;
-                              font-family: inherit;
-                              font-size: inherit;
-                              margin-right: 6px;
-                              margin-bottom: 6px;
-                              padding: 10px;
-                              border: none;
-                              border-radius: 6px;
-                              outline: none;
-                            }
-                            input:not([type='checkbox']):not([type='radio']),
-                            select, button, textarea {
-                              -webkit-appearance: none;
-                            }
-                            textarea {
-                              margin-right: 0;
-                              width: 100%;
-                              box-sizing: border-box;
-                              resize: vertical;
-                            }
-                            button, input[type='submit'], input[type='button'] {
-                              padding-right: 30px;
-                              padding-left: 30px;
-                            }
-                            button:hover,
-                            input[type='submit']:hover,
-                            input[type='button']:hover {
-                              background: #324759;
-                            }
-                            input:focus,
-                            select:focus,
-                            button:focus,
-                            textarea:focus {
-                              box-shadow: 0 0 0 2px #0096bfab;
-                            }
-                            input[type='checkbox']:active,
-                            input[type='radio']:active,
-                            input[type='submit']:active,
-                            input[type='button']:active,
-                            button:active {
-                              transform: translateY(2px);
-                            }
-                            input:disabled,
-                            select:disabled,
-                            button:disabled,
-                            textarea:disabled {
-                              cursor: not-allowed;
-                              opacity: .5;
-                            }
-                            ::-webkit-input-placeholder {
-                              color: #a9a9a9;
-                            }
-                            :-ms-input-placeholder {
-                              color: #a9a9a9;
-                            }
-                            ::-ms-input-placeholder {
-                              color: #a9a9a9;
-                            }
-                            ::placeholder {
-                              color: #a9a9a9;
-                            }
-                            a {
-                              text-decoration: none;
-                              color: #41adff;
-                            }
-                            a:hover {
-                              text-decoration: underline;
-                            }
-                            code, kbd {
-                              background: #161f27;
-                              color: #ffbe85;
-                              padding: 5px;
-                              border-radius: 6px;
-                            }
-                            pre > code {
-                              padding: 10px;
-                              display: block;
-                              overflow-x: auto;
-                            }
-                            img {
-                              max-width: 70px;
-                              max-height: 70px;
-                            }
-                            hr {
-                              border: none;
-                              border-top: 1px solid #dbdbdb;
-                            }
-                            table {
-                              border-collapse: collapse;
-                              margin-bottom: 10px;
-                              width: 100%;
-                            }
-                            td, th {
-                              padding: 6px;
-                              text-align: left;
-                            }
-                            th {
-                              border-bottom: 1px solid #dbdbdb;
-                            }
-                            tbody tr:nth-child(even) {
-                              background-color: #161f27;
-                            }
-                            ::-webkit-scrollbar {
-                              height: 10px;
-                              width: 10px;
-                            }
-                            ::-webkit-scrollbar-track {
-                              background: #161f27;
-                              border-radius: 6px;
-                            }
-                            ::-webkit-scrollbar-thumb {
-                              background: #324759;
-                              border-radius: 6px;
-                            }
-                            ::-webkit-scrollbar-thumb:hover {
-                              background: #415c73;
-                            }
+    <div id="root"></div>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+    <script src="
+    https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="
+    https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+    <script type="text/babel">
+      const title = "Bobby Ellis";
+      const subtitle = "Public Relations Major at UNC Chapel Hill"
+      class TopNav extends React.Component {
+        render() {
+          return (
+               <div className="columns has-text-centered is-size-2">
+                 <div className="column">
+                   <a href="mailto:april98@live.unc.edu" className="has-text-white"><i className="fas fa-envelope"></i></a>
+                 </div>
+                 <div className="column">
+                   <a href="https://www.instagram.com/bobbyellis98/" className="has-text-white"><i className="fab fa-instagram"></i></a>
+                 </div>
+                 <div className="column">
+                   <a href="https://twitter.com/bobbyellis98" className="has-text-white"><i className="fab fa-twitter"></i></a>
+                 </div>
+                 <div className="column">
+                   <a href="https://www.linkedin.com/in/bobby-ellis/" className="has-text-white"><i className="fab fa-linkedin"></i> </a>
+                 </div>
+               </div>
 
-                            ul {
-                            list-style-type: none;
-                            }
-                                           
-                            footer {
-                                padding: 40px;
-				padding-bottom: 25px;
-                                text-decoration: underline;
-                            }
-                                           
-                            header {
-                                padding: 40px;
-                                font-size: 37px;
-                            }
-                                           
-                            nav {
-                                font-size: 35px;
-                                 }
-					       
-			    .header p {
-	    				font-size: 25px;
-	    			}
-			    .body         {
-				    padding: 40px;
-				}
-                                    </style>
+          );
+        }
+      }
 
 
-    </head>
-     <div class="header">
-        <header>
-            <h1>Bobby Ellis</h1>
-		<p>Public Relations major at UNC Chapel Hill</p>
-        </header>
-        
-        
-        
-    </div>
-    
-    
-    <div class="navbar">
-        <center>
-            <nav>
-                <a href="https://www.linkedin.com/in/bobby-ellis/" ,="" class="onner onner-one"><i class="fab fa-linkedin"></i></a> | <a href="/bobbyellisresume.pdf">Resume</a> | <a href="/blog">Blog</a> | <a href="mailto:april98@live.unc.edu" ,="" class="onner onner-five"><i class="fas fa-envelope"></i></a> 
-            </nav>
-        </center>
-        
-    <br>
-    <div class= "body">
-        			<h1>About me</h1>
-				<p>All my life I have loved writing, meeting and helping people, and getting excitement out of every day. That’s what I see in public relations and why I want to join a public relations agency. I want a career where I feel I can make a difference.</p>
-				<p>I have interned in internal communications, public relations, and in social media. I have experience in media writing, public relations research, and in social media.  I am never afraid to talk to people and I believe life is too short to not make the most out of every day.</p>
-            
-        
-    </div>
-        
-        <footer>
-            <p></p> 
-        </footer>
-    
-    
-    
-    <div class="footer">
-    
-    
-   
-    
-    
+      class Body extends React.Component {
+        render() {
+          return (
+            <section className="section">
+              <div className="container">
+                <div className="columns">
+                  <div className="column">
+                    <h1 className="title is-size-4">About Me</h1>
+                    <img src="http://bobby-ellis.com/project1/pic1.jpg" alt="headshot" width="600px" height="400px"/>
+                    <div className="notification is-info">
+
+                      I am a junior at the University of North Carolina at Chapel Hill studying Public Relations with experience in internal communications at a major hospital and public relations for non-profits. I'm seeking a position at a public relations agency.
+
+                      With interests in writing, meeting people, and doing new activities, all the while being passionate about helping people get their message heard, I enjoy working on a team focused at accomplishing a defined goal.
+                    </div>
+                    <div className="notification is-info">
+
+                      All my life I have loved writing, meeting and helping people, and getting excitement out of every day. That’s what I see in public relations and why I want to join a public relations agency. I want to have a career where I feel I can make a difference.
+
+                      I have interned in internal communications, public relations, and in social media. I have experience in media writing, public relations research, and in social media.  I am never afraid to talk to people and I believe life is too short to not make the most out of every day.
+                    </div>
+                  </div>
+                  <div className="column">
+                    <h1 className="title is-size-4">Crash Campaign</h1>
+                    <img src="http://crashcampaign.web.unc.edu/files/2018/09/lightbulb_with_date-01.png" alt="" width="783" height="470"/>
+                    <div className="notification is-primary">
+                      <a href="http://crashcampaign.web.unc.edu/">Crash Campaign</a> is a fast-paced student competition that takes place over 24 hours in the School of Media and Journalism at the University of North Carolina. Students compete in teams to solve local business and nonprofit marketing problems.
+                    </div>
+                    <div className="notification is-primary">
+                      In 2017, my team researched <a href="https://www.youtube.com/watch?v=3rw6oiq-_Kk">social media analytics</a>, specifically online platforms that help companies reach their target audiences. I also conducted in depth consumer feedback interviews.
+                    </div>
+                  </div>
+                  <div className="column">
+                    <h1 className="title is-size-4">Courses</h1>
+                        <ul>
+                            <li className="list-item">Principles of Advertising and Public Relations</li>
+                            <li className="list-item">Introduction to Digital Storytelling</li>
+                            <li className="list-item">Writing and Reporting</li>
+                            <li className="list-item">Concepts of Marketing</li>
+                            <li className="list-item">Media Ethics</li>
+                        </ul>
+                        <br/>
+                        <br/>
+                    <h1 className="title is-size-4">Sample Work</h1>
+                    <ul>
+                      <li className="list-item"><a href="http://www.bobby-ellis.com/wp-content/uploads/2018/02/MEJO-332-Communication-Audit.pdf">MEJO 332 Communication Audit</a></li>
+                        <li className="list-item"><a href="http://www.bobby-ellis.com/wp-content/uploads/2018/02/332-fact-sheet-5.pdf">MEJO 332 Fact Sheet</a></li>
+                        <li className="list-item"><a href="http://www.bobby-ellis.com/wp-content/uploads/2018/02/Ackland-Art-Museum.pdf">MEJO 332 Media Advisory</a></li>
+                        <li className="list-item"><a href="http://www.bobby-ellis.com/wp-content/uploads/2018/02/Jed-is-a-college-student-who-likes-raisins-1.pdf">MEJO 137 Creative Brief for Sun-Maid Raisins</a></li>
+                        <li className="list-item"><a href="http://www.bobby-ellis.com/wp-content/uploads/2018/02/MEJO-475-Assignment-1.pdf">MEJO 475 – Assignment 1- L’Oréal</a></li>
+                        <li className="list-item"><a href="http://www.bobby-ellis.com/wp-content/uploads/2019/03/MEJO-379-Final-Columbia.pdf">MEJO 379- Columbia Research Plan</a></li>
+                    </ul>
+
+                  </div>
+                </div>
+
+              </div>
+            </section>
+          );
+        }
+      }
+
+      class BottomNav extends React.Component {
+        render() {
+          return (
+            <div className="hero-foot">
+              <nav className="tabs">
+                <div className="container">
+                  <ul className="is-size-4">
+                    <li className="is-active"><a href="./home.html" className="has-text-white">Home</a></li>
+                    <li><a href="./blog.html" className="has-text-white">Blog</a></li>
+                    <li><a href="http://www.bobby-ellis.com/wp-content/uploads/2019/03/Robert-Ellis-Resume.pdf" className="has-text-white">Resume</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+
+          );
+        }
+      }
+      ReactDOM.render(
+       <div>
+          <section className="hero is-medium is-primary is-bold">
+            <div className="hero-body">
+            <TopNav/>
+              <div className="container">
+                <h1 className="title">
+                  {title}
+                </h1>
+                <h2 className="subtitle">
+                  {subtitle}
+                </h2>
+              </div>
+            </div>
+            <BottomNav/>
+          </section>
+          <Body/>
+        </div>,
+        document.getElementById('root')
+      );
+    </script>
+
+<style>
+  .footer {
+    background-color: #00b89c;
+    color: white;
+}
+
+
+
+</style>
 </html>
